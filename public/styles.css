@@ -1,0 +1,39 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+}
+
+#userForm {
+  margin: 20px;
+}
+
+#user {
+  padding: 10px;
+}
+button {
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  background-color: #0452aa;
+  border: none;
+  color: white;
+  margin: 6px;
+  padding: 20px;
+  border-radius: 8px; 
+}
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#dogImage {
+  width: 50%;
+  height: 50%;
+  max-width: 800px;
+  max-height: 500px;
+  padding: 10px;
+  position: center;
+}
