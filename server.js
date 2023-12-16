@@ -4,13 +4,14 @@ const http = require('http');
 const bodyParser = require("body-parser");
 const path = require("path");
 const readline = require('readline');
-require('dotenv').config({ path: path.resolve(__dirname, '.env') });
+//require('dotenv').config({ path: path.resolve(__dirname, '.env') });
 
 const MONGO_DB_USERNAME = process.env.MONGO_DB_USERNAME;
 const MONGO_DB_PASSWORD = process.env.MONGO_DB_PASSWORD;
 const MONGO_DB_NAME = process.env.MONGO_DB_NAME;
 const MONGO_COLLECTION = process.env.MONGO_COLLECTION;
-const uri = `mongodb+srv://${MONGO_DB_USERNAME}:${MONGO_DB_PASSWORD}@galimane.et7xf.mongodb.net/?retryWrites=true&w=majority`;
+const MONGO_SERVER_URL = process.env.MONGO_SERVER_URL;
+const uri = `mongodb+srv://${MONGO_DB_USERNAME}:${MONGO_DB_PASSWORD}@${MONGO_SERVER_URL}`;
 const client = new MongoClient(uri, {
     serverApi: {
         version: ServerApiVersion.v1,
